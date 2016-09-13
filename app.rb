@@ -5,7 +5,7 @@ require 'securerandom'
 
 redis = ''
 if (ENV['REDIS_URL'] != nil)
-  redis = Redis.new(ENV['REDIS_URL'])
+  redis = Redis.new(:url => ENV['REDIS_URL'])
 else
   redis = Redis.new()
 end
