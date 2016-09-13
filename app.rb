@@ -3,7 +3,12 @@ require 'sinatra/json'
 require 'redis'
 require 'securerandom'
 
-redis = Redis.new
+redis = ''
+if (ENV['REDIS_URL'] != nil)
+  redis = Redis.new(ENV['REDIS_URL'])
+else
+  redis = Redis.new()
+end
 
 def urlify key, request
   portline = (request.port == 80 ? '' : ":#{request.port}")
