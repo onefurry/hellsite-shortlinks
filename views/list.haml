@@ -1,0 +1,15 @@
+%title Hellsite Shortlinks
+%link{:rel => "stylesheet", :href => "/style.css"}
+
+.content
+  %h1 Hellsite Shortlinks
+  %input#turl{:type => "text", :placeholder => "http://foo.tumblr.com/bar"}
+  #turl-make-parent
+    #turl-make
+      Press enter or click here to create.
+  #boxes
+  %div
+    %a{:href => 'http://furrz.tumblr.com'} This guy
+    is responsible for this wonderfully simple tumblr link shortener.
+
+%script{:src => "/creator.js"}
